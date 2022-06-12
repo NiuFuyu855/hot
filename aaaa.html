@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/a.css"/>
+	</head>
+	<body>
+		
+		<a class="mybt" href="main.html"><button>
+			<img src="images/return.png"/>
+		</button></a>
+		<div class="mytop">
+			<img src="images/hot.png"/>
+			<span>
+			今日热榜，尽知天下事
+		</span>
+		</div>
+		<img class="myfx" src="images/fx.png"/>
+		
+		
+		<iframe id="myiframe" width="100%" height="600px" src=""></iframe>
+		
+	</body>
+	<script type="text/javascript">
+		
+		var myiframe = document.getElementById("myiframe");
+		
+		myiframe.src = localStorage.getItem("mylink");    
+	
+		
+	</script>
+</html>

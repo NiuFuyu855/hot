@@ -1,0 +1,16 @@
+.myfx{
+	float: right;
+}
+.mytop{
+	float: left;
+	margin-left: 10vw;
+}
+.mybt{
+	float: left;
+}
+span{
+	font-style: oblique;
+	font-family: "微软雅黑";
+	font-size: 25px;
+	color: orangered;
+}

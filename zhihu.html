@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/a.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/http.js" type="text/javascript" charset="utf-8"></script>
+		<!--<link rel="stylesheet" type="text/css" href="css/toutiao.css" />-->
+		<link rel="stylesheet" type="text/css" href="css/common_mobile.css" media="screen and (max-width:600px)" />
+    	<link rel="stylesheet" type="text/css" href="css/toutiao.css" media="screen and (min-width:600px) and (max-width:960px)" />
+    	<link rel="stylesheet" type="text/css" href="css/toutiao.css" media="screen and (min-width:960px)" />
+	</head>
+
+	<body bgcolor="#EEEEEE">
+		
+		<div id="mytop">
+			<div>
+				<a href="main.html">
+			<img class="myreturn" src="images/return.png" />
+		</a>
+			</div>
+			<div class="mypt">
+				<img class="mypt" width="300px" height="300px" src="images/zhihu.png" />
+			</div>
+			<div>
+				<span id="name" class="myname"></span>
+			<span id="time" class="mytime"></span>
+			</div>
+			
+			<img class="myrt" src="images/login.png" />
+		
+		</div>
+		
+		
+		<ul id="myul">
+			
+			
+
+		</ul>
+
+	</body>
+
+	<script type="text/javascript">
+		function dosth(a) {
+
+			var name = document.getElementById("name");
+			var time = document.getElementById("time");
+
+			name.innerHTML = a.data.name;
+			time.innerHTML = a.data.last_update;
+			
+			var myul = document.getElementById("myul");
+
+			for(var i = 0; i < 15; i++) {
+				var li = document.createElement("li");
+
+//				var div_time = document.createElement("div");
+//				var div_name = document.createElement("div");
+				var div_title = document.createElement("div");
+				var div_link = document.createElement("div");
+				var div_other = document.createElement("div");
+				var hot_img = document.createElement("img");
+				
+				
+				var mya = document.createElement("a");
+				mya.href = a.data.list[i].link;
+				
+				var mya = document.createElement("a");
+				localStorage.setItem("myzhihu",a.data.list[i].link); 
+				mya.href = "azhihu.html";
+				
+				hot_img.src = "images/hot.png";
+				
+				div_title.className = "mytitle";
+				div_other.className = "myother";
+				hot_img.className = "myhotimg";
+				
+
+
+				div_title.innerHTML = a.data.list[i].title;
+//				div_link.innerHTML = a.data.list[i].link;
+				div_other.innerHTML = a.data.list[i].other;
+
+				li.appendChild(div_title);
+//				li.appendChild(div_link);
+				
+				li.appendChild(hot_img);
+				li.appendChild(div_other);
+				
+				mya.appendChild(li);
+
+				myul.appendChild(mya);
+			}
+
+		}
+
+		/*请求配置*/
+		var Obj = {
+			httpUrl: 'https://v1.alapi.cn/api/tophub/get?type=zhihu&token=ti9QnYWNCnR2Qp2TCBAQ',
+			type: 'get',
+			dataType: "json",
+			success: function(a) {
+				//请求成功dosth
+				dosth(a);
+			}
+		};
+		/*发送请求*/
+		httpRequest(Obj);
+
+		function chaxun() {
+			/*请求配置*/
+			var Obj = {
+				httpUrl: 'https://v1.alapi.cn/api/tophub/get?type=zhihu&token=ti9QnYWNCnR2Qp2TCBAQ',
+				type: 'get',
+				dataType: "json",
+				success: function(a) {
+					//请求成功dosth
+					dosth(a);
+				}
+			};
+			/*发送请求*/
+			httpRequest(Obj);
+		}
+	</script>
+
+</html>

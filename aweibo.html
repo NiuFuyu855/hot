@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<link rel="stylesheet" type="text/css" href="css/a.css"/>-->
+		<link rel="stylesheet" type="text/css" href="css/a_mobile.css" media="screen and (max-width:600px)" />
+    	<link rel="stylesheet" type="text/css" href="css/a.css" media="screen and (min-width:600px) and (max-width:960px)" />
+    	<link rel="stylesheet" type="text/css" href="css/a.css" media="screen and (min-width:960px)" />
+	</head>
+	<body>
+		
+		<a class="mybt" href="weibo.html"><button>
+			<img src="images/return.png"/>
+		</button></a>
+		<div class="mytop">
+			<img src="images/hot.png"/>
+			<span>
+			今日热榜，尽知天下事
+		</span>
+		</div>
+		<a href="main.html">
+			<img class="myfx" src="images/cd.png"/>
+		</a>
+		
+		
+		<iframe id="myiframe" width="100%" height="800px" src=""></iframe>
+		
+	</body>
+	<script type="text/javascript">
+		
+		var myiframe = document.getElementById("myiframe");
+		
+		myiframe.src = localStorage.getItem("myweibo");    
+	
+		
+	</script>
+</html>

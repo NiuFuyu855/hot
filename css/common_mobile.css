@@ -1,0 +1,66 @@
+#myul a
+{
+	text-decoration: none;
+}
+#myul
+{
+	padding: 0px;
+	margin: 0px;
+	margin-left: 10vw;
+	margin-top: 5px;
+}
+#myul li
+{
+	list-style: none;
+	margin-bottom: 30px;
+	border-bottom: 1px solid darkblue;
+}
+.mypt{
+	border-radius: 150px;
+	margin-left: 3vw;
+	width: 100px;
+	height: 80px;
+}
+.myrt{
+	width: 100px;
+	height: 80px;
+	float: right;
+	margin-top: -130px;
+	margin-right: 10vw;
+}
+.myname
+{
+	color: deepskyblue;
+	margin-left: 17vw;
+	font-size: 20px;
+}
+.mytime
+{
+	font-size:15px;
+	color: orangered;
+	margin-left: 50vw;
+	font-style: oblique;
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.myhotimg
+{
+	width: 18px;
+	height: 18px;
+	float: left;
+	margin-left: 3vw;
+}
+.myother{
+	color: brown;
+	
+}
+.mytitle{
+	color: black;
+}
+a:hover{
+	cursor: pointer;
+	color: orangered;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/a.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/http.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+	</head>
+
+	<body bgcolor="#EEEEEE">
+		<a href="index.html">
+			<button class="myreturn" >
+			</button>
+		</a>
+		<div class="search">
+
+			<select class="myselect" id="myselect">
+				<option value="zhihu" selected="">知乎热榜</option>
+				<option value="weibo">微博热搜</option>
+				<option value="weixin">微信热文榜 </option>
+				<option value="baidu">百度实时热点</option>
+				<option value="toutiao">今日头条 </option>
+				<option value="163">网易新闻 </option>
+				<option value="x1">新浪网 </option>
+			</select>
+			<button class="mybutton" onclick="chaxun()">确定</button>
+
+		</div>
+		<ul id="myul">
+			
+			
+
+		</ul>
+
+	</body>
+
+	<script type="text/javascript">
+		function dosth(a) {
+
+			var myul = document.getElementById("myul");
+
+			for(var i = 0; i < 5; i++) {
+				var li = document.createElement("li");
+
+				var div_time = document.createElement("div");
+				var div_name = document.createElement("div");
+				var div_title = document.createElement("div");
+				var div_link = document.createElement("div");
+				var div_other = document.createElement("div");
+				var mya = document.createElement("a");
+				mya.href = a.data.list[i].link;
+				
+				
+
+				div_time.className = "mytime";
+				div_name.className = "myname";
+				
+
+				div_time.innerHTML = a.data.last_update;
+				div_name.innerHTML = a.data.name;
+				div_title.innerHTML = a.data.list[i].title;
+				div_link.innerHTML = a.data.list[i].link;
+				div_other.innerHTML = a.data.list[i].other;
+
+				li.appendChild(div_time);
+				li.appendChild(div_name);
+				li.appendChild(div_title);
+				li.appendChild(div_link);
+				li.appendChild(div_other);
+				
+				mya.appendChild(li);
+
+				myul.appendChild(mya);
+			}
+
+		}
+		var myselect = document.getElementById("myselect");
+		/*请求配置*/
+		var Obj = {
+			httpUrl: 'https://v1.alapi.cn/api/tophub/get?type=' + myselect.value,
+			type: 'get',
+			dataType: "json",
+			success: function(a) {
+				//请求成功dosth
+				dosth(a);
+			}
+		};
+		/*发送请求*/
+		httpRequest(Obj);
+
+		function chaxun() {
+			/*请求配置*/
+			var Obj = {
+				httpUrl: 'https://v1.alapi.cn/api/tophub/get?type=' + myselect.value,
+				type: 'get',
+				dataType: "json",
+				success: function(a) {
+					//请求成功dosth
+					dosth(a);
+				}
+			};
+			/*发送请求*/
+			httpRequest(Obj);
+		}
+	</script>
+
+</html>

@@ -1,0 +1,70 @@
+body,h1{
+	margin: 0;
+	padding: 0;
+}
+.mytop{
+	background-color:whitesmoke ;
+}
+body{
+	background: #EEEEEE;
+}
+.mybody{
+	
+	margin-left: 10vw;
+	margin-top: 20px;
+}
+.mym{
+	width: 150px;
+	height: 170px;
+	margin-left: 9vw;
+}
+h1{
+	margin-top: -20px;
+	margin-left: 25VW;
+	font-style: oblique;
+	font-size: 35PX;
+	color: orangered;
+}
+.myt{
+	margin-top: -35px;
+	margin-left: 40VW;
+	font-style: oblique;
+	font-size: 25PX;
+	color: orangered;
+}
+.myi{
+	float: right;
+	margin-top: -150px;
+	margin-right: 11vw;
+}
+.myxw{
+	float: left;
+	
+}
+.mykj{
+	float: left;
+	margin-left: 20vw;
+}
+.myqt{
+	position: relative;
+	margin-left: 65vw;
+}
+.xw{
+	font-size: 35px;
+	font-family: "隶书";
+	font-style: oblique;
+	color: deepskyblue;
+}
+.mybody a{
+	text-decoration: none;
+	font-size: 28px;
+	color: black;
+}
+.mybody img{
+	width: 60px;
+	height: 60px;
+	border-radius: 150px;
+}
+a:hover{
+	color: orangered;
+}

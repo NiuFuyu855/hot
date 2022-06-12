@@ -1,0 +1,82 @@
+#myul a
+{
+	text-decoration: none;
+}
+
+
+
+#myul
+{
+	padding: 0px;
+	margin: 0px;
+	margin-left: 10vw;
+	margin-top: 5px;
+}
+#myul li
+{
+	list-style: none;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #eee;
+}
+
+.mytitle{
+	float: left;
+	color: black;
+}
+.myhotimg
+{
+	width: 18px;
+	height: 18px;
+	float: right;
+	margin-right: 20vw;
+	
+}
+.myother{
+	color: brown;
+	float: right;
+	
+}
+
+.myrt{
+	float: right;
+	margin-top: -170px;
+	margin-right: 10vw;
+}
+
+.mytime
+{
+	font-size:25px;
+	color: black;
+	margin-left: 5vw;
+	font-style: oblique;
+}
+.myname
+{
+	color: deepskyblue;
+	margin-left: 17vw;
+	font-size: 30px;
+}
+.myreturn{
+	float: left;
+	margin-left: 5px;
+	height: 20px;
+	width: 20px;
+	margin-top:5px;
+}
+.mypt{
+	border-radius: 150px;
+	margin-left: 5vw;
+	width: 200px;
+	height: 200px;
+}
+#mytop{
+	background-color: whitesmoke;
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+a:hover{
+	cursor: pointer;
+	background: orangered;
+}
